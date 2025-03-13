@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Class Works</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Class Works</h1>
+    <div id="buttons" style="text-align: center; white-space: nowrap;">
+        <button style="float: left;" onclick="loadProject('task1/index.html')">Project 1</button>
+        <button style="position: absolute; left: 50%; transform: translateX(-50%);" onclick="loadProject('task2/index.html')">Project 2</button>
+        <button style="float: right;" onclick="loadProject('task3/index.html')">Project 3</button>
+    </div>
+    <iframe id="projectFrame" style="width:100%; height:100vh;"></iframe>
+    <script src="script.js"></script>
+</body>
+</html>

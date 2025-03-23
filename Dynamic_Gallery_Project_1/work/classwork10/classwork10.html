@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <h2>Process Line</h2>
+    <div>
+        <input type="text" id="userTask" placeholder="Enter Task Name">
+        <button onclick="insertTask()">Add Task</button>
+        <button onclick="removeLastTask()">Undo Task</button>
+    </div>
+    
+    <p id="displayTasks"></p>
+
+    <script>
+        let taskList = [];
+        function insertTask() {
+            let inputElement = document.getElementById("userTask");
+            let newTask = inputElement.value.trim();
+            taskList.push(newTask);
+            refreshTaskDisplay();
+            // Clear input field
+            inputElement.value = "";
+        }
+
+        function removeLastTask() {
+                taskList.pop();
+                refreshTaskDisplay();
+        }
+
+        function refreshTaskDisplay() {
+            document.getElementById("displayTasks").textContent = taskList.join(",");
+        }
+    </script>
+</body>
+</html>

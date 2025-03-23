@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Star Patter Print</h1>
+        <input type="num" placeholder="Please enter positive number" id="num" onkeyup="star()" />
+        <br>
+        <br>
+        <div id="star_demo">
+        </div>
+
+        <script>
+            function star() {
+                let n = parseInt(document.getElementById("num").value);
+                let text = "";
+                for (let i = 1; i <= n; i++) {
+                    for (let j = 0; j < i; j++) {
+                    text += "* ";
+                    }
+                  text += "<br>";
+                }
+            document.getElementById("star_demo").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function generate(){
+            let text = document.getElementById("input_field").value;  
+            let upperCaseText = text.toUpperCase();  
+            console.log(upperCaseText);  
+            document.getElementById("output_field").value = upperCaseText;  
+        }
+    </script>
+</head>
+<body>
+    <h1>LOWER CASE TEXT TO UPPER CASE TEXT CONVERTER</h1>
+    <input id="input_field" placeholder="Input Text" onkeyup="generate();" />
+    <input id="output_field" placeholder="Output Text" disabled />
+</body>
+</html>

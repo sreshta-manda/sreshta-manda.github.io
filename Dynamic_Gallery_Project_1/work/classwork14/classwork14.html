@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="student.js"></script>
+
+    <style>
+
+        body {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            background-color: #f5f5f5;
+
+            flex-direction: column;
+
+        }
+
+ 
+
+        #container {
+
+            text-align: center;
+
+            padding: 20px;
+
+            background-color: white;
+
+            border-radius: 10px;
+
+        }
+        input {
+
+            width: 200px;
+
+            font-size: 14px;
+
+            padding: 8px;
+
+            margin: 5px;
+
+            text-align: center;
+
+        }
+        button {
+
+            width: 220px;
+
+            padding: 12px;
+
+            margin-top: 10px;
+
+            color: white;
+
+            font-size: 13px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            background-color: lightgreen;
+
+        }
+
+ 
+
+        #studentDetails {
+
+            margin-top: 20px;
+
+            font-size: 14px;
+
+            color: #23bbcb;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <h2>Enter Student Details</h2>
+
+        <input id="name" placeholder="Enter Name">
+
+        <input id="studentId" placeholder="Enter Student ID">
+
+        <input id="course" placeholder="Enter Course">
+
+        <input id="gender" placeholder="Enter Gender">
+
+        <br>
+
+ 
+
+        <button onclick="addNewStudent()">Add Student Info</button>
+
+        <button onclick="clearInputs()">Clear Inputs</button>
+
+        <button onclick="clearDisplay()">Clear Display</button>
+
+        <button onclick="showStudentDetails()">View Student Info</button>
+
+        <br>
+
+        <input type="text" placeholder="Search by Name or Student ID" id="searchBox" oninput="searchStudent();"/>
+
+        <br>
+
+        <div id="studentDetails"></div>
+
+    </div>
+
+</body>
+
+</html>
+
+ 
+

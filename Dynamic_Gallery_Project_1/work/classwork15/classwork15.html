@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container_div {
+                padding: 15px;
+                margin: 15px;
+                border-radius: 10px;
+            }
+            input {
+                width: 180px;
+                font-size: 18px;
+                padding: 8px;
+                margin: 8px;
+            }
+            button {
+                width: 220px;
+                padding: 12px;
+                margin-top: 12px;
+                font-size: 20px;
+                color: lightseagreen;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            #output_section {
+                margin-top: 25px;
+                font-size: 22px;
+                font-weight: bold;
+                color: #333;
+                text-align:center;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="container_div">
+            <h2>Random Number Within a Range</h2>
+            <input type="number" placeholder="Enter Min" id="min_val"/>
+            <input type="number" placeholder="Enter Max" id="max_val"/>
+            
+            <button onclick="generateRandomNumber()">Generate Random Number</button>
+            
+            <p>Random number:</p>
+        </div>
+        <div id="output_section"></div>    
+
+
+        <script>
+
+            (function() {
+                alert("hello!");
+            })();
+
+            function disappearMessage() {
+                document.body.innerHTML = "<h1 style='text-align:center;'>Proof!</h1>";
+            }
+            setTimeout(disappearMessage, 5000);
+
+            function generateRandomNumber() {
+                let minVal = parseInt(document.getElementById("min_val").value);
+                let maxVal = parseInt(document.getElementById("max_val").value);
+
+                let randomValue = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
+                document.getElementById("output_section").innerHTML = randomValue;
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<DOCTYPE html>
+<html>
+    <head>
+    </head>
+
+    <body>
+        <h1>Star pattern with colors</h1>
+        <input id="user_input"placeholder="Enter number" onkeyup="generate();"/>
+        <div id="demo_div"></div>
+        <script>
+            const colors=["red","blue", "green", "pink"];
+            let index=0;
+            function generate(){
+                let text = "" ;
+                let n = parseInt(document.getElementById("user_input").value);
+                for(let i = 0; i <= n; i++){
+                    for(let j = 0; j < i; j++){
+                        text += "* ";
+                    }
+                    text += "<br>";
+                }
+
+                document.getElementById("demo_div").innerHTML=text;
+                document.getElementById("demo_div").style="color:"+colors[index];
+                index=(index+1)%colors.length;
+            }
+        </script>
+    </body>
+</html>
